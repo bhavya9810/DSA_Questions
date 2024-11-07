@@ -23,25 +23,42 @@ public class LinkedLIstCycle_II_142_tortoise_and_hare {
 	fifth.next=sixth;
 	sixth.next=third;
 	
-	findFirstNodeInLoop(first);
-	
+Node node=findFirstNodeInLoop(first);
+	System.out.println(node.data);
 	
 	}
 
 
-private Node findFirstNodeInLoop(Node head) {
+private static Node findFirstNodeInLoop(Node head) {
+	
 	
 	Node slow=head;
 	Node fast=head;
 	
+	boolean foundCycle=false;
+	
 	while(fast!=null && fast.next!=null) {
-		 slow=head.next;
-		 fast=head.next.next;
-		 
-		 if(slow==fast) return fast;
+		
+		slow=slow.next;
+		fast=fast.next.next;
+		
+		if(slow==fast) {
+			foundCycle=true;
+			break;
+		}
+		
 	}
 	
+	if(!foundCycle) return null;
 	
+	fast=head;
+	
+	while(slow!=fast) {
+		fast=fast.next;
+		slow=slow.next;
+	}
+	return slow;
+
 }
 
 }
