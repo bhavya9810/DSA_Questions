@@ -44,7 +44,7 @@ public class OddEvenLinkedList_328_BF {
 	
 	private static Node oddEvenList(Node head) {
 		
-		
+		if(head==null || head.next==null) return head;
 		
 		Node temp=head;
 		
