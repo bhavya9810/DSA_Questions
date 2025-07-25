@@ -83,7 +83,7 @@ public class detectCycleInGraph_BFS {
 		adjList.get(5).add(2);
 		adjList.get(5).add(7);
 		adjList.get(6).add(3);
-		adjList.get(6).add(7);
+		adjList.get(6).add(7); 
 		adjList.get(7).add(5);
 		adjList.get(7).add(6);
 		

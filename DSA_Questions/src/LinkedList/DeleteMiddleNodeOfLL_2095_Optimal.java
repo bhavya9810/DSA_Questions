@@ -45,6 +45,8 @@ public class DeleteMiddleNodeOfLL_2095_Optimal {
 		slow=slow.next;
 	}
 	
+	slow
+	
 	}
 
 }
